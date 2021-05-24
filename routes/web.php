@@ -18,7 +18,8 @@ Route::get('/', [PortadaCont::class, 'index']);
 
 Route::get('/portada', [PortadaCont::class, 'index']);
 
+Route::any('/busqueda', [PortadaCont::class, 'buscar']);
 
-Route::get('/busqueda', [PortadaCont::class, 'buscar']);
+Route::get('/resbusqueda', [PortadaCont::class, 'buscarprod']);
 
 

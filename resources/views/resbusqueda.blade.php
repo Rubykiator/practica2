@@ -24,8 +24,6 @@
                 width: 100px;
                 height: 100px;
             }
-
-            
         </style>
     </head>
     <body class="antialiased">
@@ -35,24 +33,22 @@
     </label>
 
 
-        <h2>Busqueda por categoria</h2>
-
-       <h3>Elige la categoria a buscar</h3>
+    <h2>Productos de la categoria <?=$_GET["categoria_id"]?></h2>
 
 <?php
-        foreach($categorias as $categoria){
-?>
-            <a href="http://localhost/practica2/public/resbusqueda?categoria_id=<?=$categoria->id?>"><?= $categoria->nombre?></a>
-            <br>
-<?php
+        foreach($productos as $producto){
+        if ($producto->categoria_id == $_GET["categoria_id"]) {
         
-    }
+        
 ?>
-        <br>
 
-
-
-
+            <li>
+            <?= $producto->nombre?><br>
+            <small><?= $producto->descripcion?></small><br><br>
+            </li>
+<?php
+        }}
+?>
 
     </body>
 </html>
