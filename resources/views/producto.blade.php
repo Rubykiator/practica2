@@ -33,20 +33,21 @@
     </label>
 
 
-        <h1>Productos Destacados</h1>
 
 <?php
-        
         foreach($productos as $producto){
-        if ($producto->destacado) {
+        if ($producto->nombre == $_GET["nombre"]) {
+        
+        
 ?>
 
-            <li>
-            <img src="/../practica2/assets/img/<?= $producto->imagen?>" alt="<?= $producto->nombre?>" height="100px" width="100px"><br>
-            <a href="http://localhost/practica2/public/producto?nombre=<?= $producto->nombre?>"><?= $producto->nombre?></a>
-            <br>
-            <small><?= $producto->descripcion?></small><br><br><br>
-            </li>
+            
+            <h1><?= $producto->nombre?></h1><br>
+            <img src="/../practica2/assets/img/<?= $producto->imagen?>" alt="<?= $producto->nombre?>" height="200px" width="200px">
+            <p>Descripcion: <?= $producto->descripcion?></p>
+            <p>Precio: <?= $producto->precio?> con un iva del <?= $producto->iva?>%</p>
+            <p>Stock: <?= $producto->stock?></p>
+            
 <?php
         }}
 ?>

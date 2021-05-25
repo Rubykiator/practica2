@@ -22,4 +22,6 @@ Route::any('/busqueda', [PortadaCont::class, 'buscar']);
 
 Route::get('/resbusqueda', [PortadaCont::class, 'buscarprod']);
 
+Route::get('/producto', [PortadaCont::class, 'product']);
+
 

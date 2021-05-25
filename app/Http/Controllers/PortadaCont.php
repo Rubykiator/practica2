@@ -39,4 +39,10 @@ class PortadaCont extends Controller
         return view('resbusqueda', compact('productos'));
     }
 
+    public function product()
+    {
+        $productos = PortadaMod::get();
+        return view('producto', compact('productos'));
+    }
+
 }

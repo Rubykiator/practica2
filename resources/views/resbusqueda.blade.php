@@ -43,7 +43,8 @@
 ?>
 
             <li>
-            <?= $producto->nombre?><br>
+            <img src="/../practica2/assets/img/<?= $producto->imagen?>" alt="<?= $producto->nombre?>" height="100px" width="100px"><br>
+            <a href="http://localhost/practica2/public/producto?nombre=<?= $producto->nombre?>"><?= $producto->nombre?></a><br>
             <small><?= $producto->descripcion?></small><br><br>
             </li>
 <?php
