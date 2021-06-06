@@ -29,8 +29,8 @@ class PortadaCont extends Controller
     public function buscar()
     {
             
-                $categorias = BusquedaMod::get();
-                return view('busqueda', compact('categorias'));
+        $categorias = BusquedaMod::get();
+        return view('busqueda', compact('categorias'));
     }
 
     public function buscarprod()
